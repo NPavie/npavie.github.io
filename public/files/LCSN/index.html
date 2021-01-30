@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Procedural Texture Synthesis by Locally Controlled Spot Noise</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood_custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+			
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Slides begins -->
+				<section> <!-- 1 : Title -->
+					<h3>Procedural Texture Synthesis by </h3>
+					<h1> Locally Controlled Spot Noise </h1>
+
+					<!-- logos -->
+					<div style="display: inline-block; margin: 0px 0px">
+						<img style="background-color: #444" height="50em" src="css/logos/logo_ul.png">
+						<img style="background-color: #444" height="50em" src="css/logos/logo_xlim.png">
+						<img style="background-color: #444" height="50em" src="css/logos/logo_icube.png">
+						<img style="background-color: #444" height="50em" src="css/logos/logo_us.png">
+					</div>
+					<br/>
+
+					<small><p> <mark>N. Pavie </mark>, G. Gilet, J.-M. Dischler & D. Ghazanfarpour </p></small>
+					<br>
+					<p> <mark> WSCG 2016 - Pilzen </mark> </p>
+					
+					<small><p> http://unil.im/LCSNoise </p></small>
+					<br>
+					<small><p> nicolas.pavie@unilim.fr </p></small>
+					<br>
+					<small><p> press "s" for speaker mode and access speaker notes </p></small>
+
+					<aside class="notes">
+						welcome speech <br>
+						<!--
+						I will present our work on Procedural texture synthesis by Locally Controlled Spot Noise.
+						This work was realised in collaboration with the icube laboratory and the University of Strasbourg.
+						-->
+					</aside>
+					
+				</section>
+				
+				
+				<section> <!-- 2 : First section : Context and contributions -->
+					<section data-background-image="images/background_slide_dark.png">
+							<h2> Context </h2>
+							<div style="float:right; text-shadow: 2px 4px 2px #000" align="left">
+								<p style="text-shadow: 2px 4px 2px #000"> Larger, more detailed scenes</p>
+								<ul>
+								<li> Long authoring time </li>
+								</ul>
+								<p style="text-shadow: 2px 4px 2px #000"> Procedural content creation </p>
+								<ul>
+								<li> Procedural texture synthesis 
+									<ul>
+									    <li> By example </li>
+									    <li> Controlled edition </li>
+									</ul>
+ 								</li>
+
+								</ul>
+								
+							</div>
+							<img src="images/fabricInputHTML.svg">
+
+
+								<aside class="notes"> 
+							With the growing power of GPUs, users expect larger and more detailed virtual scenes to dive in. <br>
+							Creating very detailed objects is painstaking, and requires more time or more artists for the conception of scenes. <br> 
+
+							Procedural content creation can address this problematic : <br>
+							For example, to create surfacic details, artists can use procedural textures to compute a pattern at render time.
+							Those textures can be automatically prepared using procedural texture synthesis methods, such as "by example" procedural noises.
+							 </aside>
+							
+					</section>
+
+					<section>
+							<h2> Texture synthesis </h2>
+							<img src="images/TextureTypesHTML.svg" alt="">
+
+							<aside class="notes">
+							A wide variety of textures can be found in nature with more or less structure : <br>
+							In this figure, they are ordered from less structured on the left to more structured on the right.<br>
+							To reproduce such textures, a possible approach consists in copying parts of the input to the target texture.<br>
+							But this approach produces a discrete output, with limited zooming capabilities due to limited resolution of the input.<br>
+							Procedural textures can produce better results : <br>
+							they are defined by continuous functions that can be evaluated at any resolution.<br>
+							We focus our work on procedural textures computed using procedural noises.
+
+							 </aside>
+					</section>
+
+					<section>
+							<h2> Procedural Texturing by Noises <br/> Pros</h2>
+							<br>
+							
+							<ul align="left" style="vertical-align: top; margin-top:50px"> 
+								<li> No Repetition </li>
+								<li> Compactness </li>
+								<li> Continuity </li>
+								<li> Generic </li>
+								<li> Fast evaluation</li>
+							</ul>
+							
+							<img style="margin-top: 0px" width="450em" src="images/DragonFabric.png" alt="">
+							
+							
+							<br>
+							<p>Can reproduce random and structured textures !</p>
+							<ul> 
+								<li> Local Random Phase Noise (LRPN) [<em>Gilet et al. 2014</em>] </li>
+							</ul>
+
+							<aside class="notes"> 
+							Procedural noises have many advantages over other texture synthesis methods : <br>
+							<ul> <li> they display no repetitions or discontinuity over their evaluation space, due to their random nature, </li>
+							<li> they can be stored as a simple program on the gpu and evaluated on a per-pixel basis, </li>
+							<li> and they can produce a very wide range of different pattern. </li>
+							</ul> <br>
+							Noises can very efficiently reproduce stochastic textures, but the recent Local Random Phase noise of Gilet et al also successfully reproduced structures within a pattern.
+							</aside>
+
+					</section>
+					
+					<section>
+							<h2> Procedural Texturing by Noises <br/> Cons</h2>
+							
+							<p>Spectral definition <mark>hard to control </mark> </p>
+							<ul>
+								<li>Not very artist friendly</li>
+								<ul><li> By example approach </li>   </ul> 
+							</ul>
+							<br/>
+							<p>By example noises visual edition ? </p>
+							<ul> 
+								<li> <mark> Visual modification = New example</mark> </li>
+							</ul>
+
+							<aside class="notes">
+							Procedural noises relie on the definition of a targeted spectrum. <br>
+							Visually editing a pattern through the frequency domain is a very complicated matter and is absolutely not artist friendly. <br>
+							Instead, artists can use by example noises to reproduce an input example. <br>
+							But if the artist wants to directly fine tune the resulting procedural pattern, he can only edit the spectral domain. <br>
+							His only viable solution, to visually modify the result, is so far to create a new sample to be analysed.
+							</aside>
+
+
+					</section>
+
+					<section>
+						<h2> Our contributions </h2>
+						<p> Keeping LRPN benefits </p>
+						<ul>
+							<li> Fast evaluation </li>
+							<li> Structures reproduction </li>
+							<li> By example approach </li>
+						</ul>
+
+						<p> Improving <mark>spatial control</mark> </p>
+						<ul>
+							<li> Over <mark>structural features</mark> </li>
+							<li> Over the <mark>pattern structure</mark> itself </li>
+						</ul>
+
+						<aside class="notes">
+							To avoid spectral edition, we propose an extension of the LRP noise by introducing an alternative formulation. <br>
+							We keep the benefits of the LRP noise, which are
+							<ul> 
+							<li> a fast per-pixel evaluation, </li>
+							<li> the ability to produce structural features in a pattern </li>
+							<li> and the by example approach. </li>
+							</ul>
+							But our new formulation improves the spatial control over the final pattern.
+							We provide intuitive control over the structural features of the pattern and over the pattern structure.
+
+ 						</aside>
+
+					</section>
+
+				</section>
+
+				<section> <!-- 3 : Related works : Sparse convolution noises -->
+				
+					<section data-transition="slide-in fade-out">
+						<h2> Sparse convolution noises </h2>
+					
+						<p>Random distribution of impulses + kernel</p>
+						<ul>
+							<li> Gabor kernel [<em>Galerne et al. 2012</em>] for example :</li>
+						</ul> <br>
+						<img height="300em" src="images/GaborHow.svg" alt="">
+						<aside class="notes">
+							To compute a procedural noise, a common approach is to convolve a random distribution of impulses with a kernel targeting a specific PSD. <br>
+							This approach is used by many noises like the Gabor noise by example. <br> 
+							The Gabor noise uses a configurable Gabor kernel that can produce a specific spectrum depending on a few number of parameters.
+
+						</aside>
+					</section>
+					<section data-transition="fade-in fade-out">
+						<h2> Sparse Convolution noises </h2>
+						<p> LRP noise : regular distribution + sum of cosines </p>
+						<ul>
+							<li> Produces structures using fixed phases </li>
+						</ul> <br>
+						<img height="300em" src="images/LRPHow.svg" alt="">	
+						
+						<aside class="notes">
+						Local Random phase noise of Gilet et al uses a different approach : <br>
+						Convolution is still used, but the random distribution is replaced by a regular grid of more complex kernels based on cosine functions. <br>
+						The use of cosines allows for more spectral accuracy and for structure reproduction using the phases of the frequencies encoding the structural features.
+						</aside>
+					</section>
+
+					<section data-transition="fade-in slide-out">
+						<h2> Sparse Convolution noises </h2>
+						<p> Spot Noise : random distribution + structured kernels [<em>Van Wijk 1991</em>] </p>
+						<ul>
+							<li> <mark>Kernel spatial structure</mark> transfered in the result </li>
+						</ul> <br>
+						<img height="300em" src="images/SpotNoiseHow.svg" alt="">
+
+						<aside class="notes"> 
+							The two previous noises are designed to reproduce a specific spectrum, making them difficult to use for direct visual edition. <br>
+							The spot noise of Van Wijk exposes an interesting capability related to the spatial aspect of its kernel.<br>
+							Van Wijk noted that a part of the kernel's visual structure was transferred to the noise pattern.<br>
+							For example, using a kernel with a specific arrangement (such as the grid kernel here), we can see that a similar structure appears in the output.
+						</aside>
+					</section>
+					
+				</section>
+
+				<section> <!-- 4: Our noise model : Spot noise for structural models, and  -->
+					
+					<section>
+						<h2> Locally Controlled Spot Noise <br> the noise model </h2>
+						<p> Fully procedural spot noise </p>
+						<ul> 
+						<li> Procedural Multi-Gaussian spot </li>
+						<li> Controlled non-uniform distribution of impulses </li>
+						</ul>
+						<img height="300em" src="images/LCSNHow.svg" alt="">
+						<aside class="notes">
+							We extend the idea of a non random distribution used by the LRP noise, and use the observation of van wijk, to create a new noise model called Locally Controlled Spot Noise. <br>
+							This noise is a fully procedural Spot Noise that uses 
+							<ul> 
+							<li> a procedural multi-gaussian kernel to create structural local features </li>
+							<li> a controllable non-uniform random distribution to create a global structure in the pattern</li>
+							</ul>
+						</aside>
+
+					</section>
+
+					<section> 
+						<h2> Locally Controlled Spot Noise <br> details </h2>
+						<ul>
+						    <li>Ellipsoidal Gaussian function as primitive</li>
+						</ul>
+						<br>
+						<img height="300em" src="images/ellipseHTML.svg" alt="">	
+						
+						<!-- class="fragment fade-in" data-fragment-index="1" -->
+						<img height="300em" src="images/listeKernels.svg" alt="">
+
+						<aside class="notes">
+							Our kernel formulation is based on ellipsoidal Gaussian functions that are used as modeling primitives. <br>
+							Each function takes in argument a semi-positive matrix (V) and a fall-off distance from the ellipse iso-countour. <br>
+							This primitive is versatile and allows to create a wide range of spots with an arbitrary number of gaussian functions, such as those presented on the left.
+
+						</aside>
+					</section>
+
+					<section> 
+						<h2> Locally Controlled Spot Noise <br> details </h2>
+						<ul><li>  Ellipse fitting for kernel extraction </li></ul>
+						<img height="400em" src="images/simpleEx.png" alt="">
+
+						<aside class="notes">
+							With this primitive, simple structural features can be extracted using an ellipse fitting algorithm. <br>
+							The maximum amount of ellipses extracted is a parameter of the analysis process. <br>
+							In this example, a small sample of the left input was used to extract a maximum of 12 ellipses. <br>
+							The final result was obtained by setting a near-regular distribution of the obtained kernel.
+						</aside>
+
+					</section>
+
+					<section data-transition="slide-in fade-out">
+						<h2> Locally Controlled Spot Noise <br> details </h2>
+						<ul>
+						    <li> Local density functions (profiles) </li>
+						</ul>
+						<img height="400em" src="images/DensityProfilesHTML.svg" alt="">
+
+						<aside class="notes"> 
+							Our distribution process relies on a virtual grid, in which the density of impulses can be controlled locally. <br>
+							In each cell, a density profile constrains the distribution of impulses in a specific area of the cell. <br>
+							In this illustration, from the left to the right, the impulses are more and more constrained to the center of the cell in the distribution process.<br>
+							The left profile fully covers a cell, giving a random distribution over the whole evaluation space, while the right profile only covers a small area over the center of the cell, creating a near-regular distribution. <br>
+							
+						</aside>
+
+					</section>
+					<section data-transition="fade-in slide-out">
+						<h2> Locally Controlled Spot Noise <br> details </h2>
+						<ul>
+						    <li> Global density functions (i.e. noises) </li>
+						</ul>
+						<!-- intuitive, rajouter la distribution complete en fond -->
+						<img height="400em" src="images/globalDensityField.svg" alt="">
+
+						<aside class="notes">
+							But the density of impulses can also be Controlled on a more global scale using a global density field : <br>
+							Each impulse has a random density factor that is tested against the density field, the impulse being rejected if the test fails. <br>
+							In this example, the global density field is computed by a procedural noise function : <br>
+							Each impulses with a density factor inferior to the noise result is accepted and creates a feature in the output. <br>
+							As you can see in this example, this density field can be used to create a pattern with an irregular structure. 
+						</aside>
+					</section>
+
+				</section>
+
+
+				<section> <!-- Results Noise control and by example approach -->
+				
+					<section> 
+						<h2> Pattern edition <br> example </h2>
+						<video controls src="videos/editionExample.mp4"></video>
+						<p>~45fps</p>
+						<aside class="notes">
+							Both the kernels and the distribution can be edited interactively with direct visualisation of the result.<br>
+							In this video, the modification of each gaussian function in the top left corner immediately impacts the result on the right.<br>
+							For each Gaussian, scale, rotation, position and the fallof can be edited on the fly. <br>
+							The local density profile allows for intuitive and fast edition of the pattern structure. <br>
+							For example, a random pattern can fastly be transformed in a near-regular pattern.
+						</aside>
+					</section>
+
+					<section> 
+						<h2> Mixing noises </h2>
+						<img height="400em" src="images/mixNoiseHTML.svg" alt="">
+						<p> ~55 fps </p>	
+						<aside class="notes">
+							Every parameters of the noise model can be computed randomly or edited according to the environnement.<br>
+							In this example, we mixed two noises using a single distribution process and two different kernels randomly selected.<br>
+							But the density field was used to influence this random selection over specfic part of the pattern. <br>
+							The result is a mix of two noises, obtained using a single noise function.
+						</aside>	
+					</section>
+
+					<section> 
+						<h2> Mixing densities </h2>
+						<img height="500em" src="images/mixLocalGlobalDensitiesResultHTML.svg" alt="">	
+						<p> ~55 fps </p>
+						<aside class="notes">
+							Both global and local densities can be mixed to create an even wider range of patterns.<br>
+							In this example, both results use a global density field with the same 4-Gaussian kernel, but the second pattern also used a local density profile to introduce a supplemental structure. <br>
+							Impulses are both locally constrained and globally tested against the density field.
+						</aside>	
+					</section>
+
+					<section data-transition="slide-in fade-out">
+						<h2>Results</h2>
+						<img height="450em" src="images/SchemaResultBlue.svg" alt="">
+						<p> ~60 fps </p>
+						<aside class="notes">
+							We now present some hand-made results :<br>
+							To reproduce the targeted pattern, 4 ellipses were manually fitted over a small sample of it. <br> 
+							The distribution was intuitively deduced and modified accordingly.<br>
+							This pattern was realised in few minutes and can still be easily modified interactively.<br>
+						</aside>	
+					</section>
+					<section data-transition="fade-in fade-out">
+						<h2>Results</h2>	
+						<img height="450em" src="images/SchemaResultYellow.svg" alt="">	
+						<p> ~45 fps </p>
+						<aside class="notes">
+							For this second result, 6 gaussians were manually fitted over a small sample of the targeted patterns. <br>
+							In this case, two features are being modeled in a single kernel : <br>
+							Gaussian functions of two different colors were use to represent specific parts of the sample. <br>
+							Here again, the distribution was intuitively deduced and modified to recreate the near-regular pattern. <br>
+							As shown here, variety is still present in the resulting pattern due to the random process.<br>
+						</aside>	
+					</section>
+					<section data-transition="fade-in fade-out">
+						<h2>Results</h2>
+						<img height="400em" src="images/byExampleJeansHTML.svg" alt="">
+						<p> ~10 fps </p>
+						<aside class="notes">
+							This result is a first attempt to reproduce complex features using our fully automatic by example approach.<br>
+							In this particular case, the maximum amount of ellipses per kernel was limited to twenty. <br>
+							Kernels were extracted by the ellipse fitting algorithm over several parts of the input after a single subdivision. <br>
+							The output was computed as a random distribution of those kernel, each kernel being randomly chosen when an impulse is distributed.<br>
+							This example shows one of the drawback of our model : complex features modeling requires a high number of gaussian.<br>
+							Another issue in our process is that both distribution and spatial features cannot be deduced at the same time, so we use a random distribution.
+							
+						</aside>	
+					</section>
+					<section data-transition="fade-in">
+						<h2>Results</h2>
+						<img height="350em" src="images/DragonFabric.png" alt="">	
+						<img height="400em" src="images/bunny_red.png" alt="">
+						<p> ~20fps </p>
+						<aside class="notes">
+							We originally aim at real-time creation of details over objects.<br>
+							Our noise function was successfully on 3D objects with a simple bump mapping to create a complex surface.<br>
+							The blue dragon in here uses the blue fabric pattern presented earlier. <br>
+							Those patterns were computed by a simple fragment shader in around 20 fps.
+						</aside>
+					</section>
+				</section>
+
+				<section> <!-- Conclusion, limitation -->
+					<section>
+						<h2>Limitations</h2>
+						<p> Complex features modeling </p>
+						<ul align="left"> <li> High number of Gaussian functions </li> </ul>
+						
+						<p> By example approach </p>
+						<ul align="left">
+							<li> Distribution is hard to extract </li>
+							
+						</ul>
+						
+						<aside class="notes">
+							Some limitations remains with this noise model :
+							As said earlier, complex features modeling requires a high number of gaussian functions.<br>
+							It is also very difficult to automatically find the distribution without precisely knowing what feature is distributed.<br>
+						</aside>
+
+					</section>
+
+					<section>
+						<h2>Conclusion</h2>
+
+						<p> Getting back some control </p>
+						<ul> 
+							<li> Local features edition </li>
+								<ul> <li> Spot based on Gaussian ellipses  </li>
+								</ul>
+							<li> Pattern structure edition </li>
+								<ul> 
+									<li> Local density profiles </li>
+									<li> Global density fields </li>
+								</ul>
+						</ul>
+						<aside class="notes">
+							But we successfully got back some control over the noise edition process. <br>
+							We can visually edit local features using our gaussian ellipse primitive. <br>
+							And we can modify locally or globally the structure of the resulting pattern using our density profile and a global density field.
+						</aside>
+
+
+					</section>
+
+					<section>
+						<h2>Future Works</h2>
+
+						<p> <mark>Improving by example approach </mark></p>
+						Better ellipse decomposition techniques
+
+						<p> <mark>Extension to 3D </p>
+						<p> Shell texture editions <br>
+						3D texture synthesis by example </p>
+
+						<aside class="notes">
+						There is still room for a lot of improvement : <br>
+						Our by example approach would greatly benefit from a better ellipse decomposition to extract structural features more efficiently.<br>
+						We could also extend our noise to 3D applications, for example to create procedural shell texture or 3D texture synthesis by example.<br>
+					</aside>
+					</section>
+
+					<section>
+						<h1> Thank you <br> for your attention </h1>	
+					</section>
+
+				</section>
+				
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				showNotes: false,
+				history: true,
+				//transition: 'fade',
+				slideNumber: true,
+				math: {
+			        mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+			        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+			    },
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, 
+						callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

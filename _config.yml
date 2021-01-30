@@ -11,10 +11,10 @@ permalink:        pretty
 #relative_permalinks: true
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+title:            'Nicolas Pavie'
+tagline:          ''
+description:      'Software engineer @ <br/><a href="https://braillenet.org"><img src="https://www.braillenet.org/wp-content/themes/braillenet/img/logo-braillenet.png"/></a>'
+url:              http://npavie.github.io
 baseurl:          /
 
 author:
@@ -27,4 +27,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/npavie

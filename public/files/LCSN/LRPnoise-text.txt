@@ -1,0 +1,146 @@
+Text of talk available at: http://www-sop.inria.fr/members/Kenneth.Vanhoey/pro/data/research/SA14pres/LRPNoise-VF.htm
+
+== S1 ==
+(Welcome speech)
+
+== S2 ==
+With today's increasing demand for bigger and extremely detailed open virtual worlds, manual authoring of digital content by artists becomes a real bottleneck.
+Automated content creation is thus becoming a challenging topic.
+Within this context, we address texturing by example.
+The principle is the following: from a small input example, generating a large texture with similar visual appearance.
+
+== S3 ==
+Natural textures exhibit more or less structure.
+In this figure they are ordered from less structured on the left to more structured on the right.
+A first category of methods consists in copying content from the input to the target texture.
+They can reproduce most of real world textures but produce discrete outputs only.
+It means that resolution is limited and you cannot zoom in without seeing pixels.
+To overcome this limitation, a second category is procedural texturing.
+It defines a continuous function that can be evaluated at any resolution.
+Currently, these methods are however limited to gaussian patterns, such as the two less structured images on the left.
+In this work, we present a noise based procedural model which is able to reproduce more structure, typically the third and fourth images.
+
+== S4 ==
+Noise based procedural texturing shows some interesting advantages.
+It can be used to produce visual content without repetition artifacts, thanks to the random nature of noise.
+Such content is also defined as a function and is thus compact and continuous.
+Noise can be used to model a wide variety of visual content and can furthermore be evaluated on the fly in a fragment shader.
+
+== S5 ==
+Nonetheless, there are some important drawbacks.
+Noise is notoriously hard to control.
+Indeed, it is not intuitive, especially for an artist, to deduce which parameters must be tuned in order to produce a given visual effect.
+This limitation is usually tackled through texturing by example, where the parameters of noise can be computed from an example image. 
+
+The second drawback is that Noise in itself cannot reproduce structure, and is thus limited to a very narrow range of textures, such as gaussian patterns.
+
+== S6 ==
+Overcoming this last limitation is the focus of our work.
+We propose in this talk a new noise formulation that is fast to evaluate and allows to reproduce some structure while being easy to control through by-example parameters computation. 
+
+== S7 ==
+The fundamental idea of noise by example is to automatically compute the parameters of a noise reproducing an input image. 
+The input is first analyzed by a Fourier Transform.
+This decomposition yields a Power Spectrum Density (or PSD) and phase information.
+The PSD encodes the energy distribution over frequencies, and the phase encodes structure.
+The idea behind noise by example is to randomly choose the phase in order to generate variety.
+The PSD is approximated in order to reproduce the overall visual appearance of the input.
+
+== S8 ==
+In this figure, for instance, we show three images with their PSD.
+The two images on the left have similar PSD and look similar.
+Conversely, the image on the right has a different PSD and looks different. 
+
+== S9 ==
+Now the goal is to compute an output from a given spectrum.
+In other words, what is the question mark here ? 
+
+The first idea is inverse fourier transform.
+This however produces a discrete image and not a continuous function. 
+
+The second idea is to directly evaluate the Fourier Series.
+It is however not tractable in practice, as it raises a severe complexity issue, as a sum over all frequencies must be evaluated for each target pixel.
+The problem can be overcome by using sparse convolution.
+
+== S10 ==
+This is what is done by Gabor Noise By Example, the state of the art method.
+The idea behind Gabor noise is the following.
+First, pick up random samples on the left.
+Then, for each sample, locally add a cosine wave controlled by the PSD.
+Sum up everything to get the final output.
+It works well but there is a limitation.
+
+== S11 ==
+The limitation is that structure cannot be reproduced.
+As said earlier, the structure is encoded in the phase.
+look at this example.
+On the left is the input.
+In the middle, the phase is random and the fine structure is lost.
+On the right, the phase is preserved and the fine structure is reproduced.
+Previous work cannot do that.
+
+Now let me explain how we tackle the problem.
+
+== S12 ==
+We propose a new noise formulation encompassing both gabor noise and fourier series.
+The idea is the following: distribute samples on a regular grid.
+(== S13 ==)
+For each sample, locally add a sum of cosines controlled by the PSD.
+Then sum up everything to get the final output.
+
+== S14 ==
+This looks very similar to previous work.
+However, there are two advantages.
+First, the number of samples and the number of cosines are independant.
+Thus, we can choose the tradeoff between speed and accuracy.
+Secondly, the sample positions and the phase values are independant.
+We thus can preserve the input phases to reproduce structure features.
+
+== S15 ==
+More precisely, we fix the phase for one part of the spectrum.
+The question is: what is the relevant part of the spectrum.
+What we have done here is to select the part with the highest energies.
+It works in many situation.
+It is simple.
+It allows us to easily control the amount of structure by a single treshold.
+For instance, on this example, from left to right, structure preservation increases, fidelity to the input increases while randomness decreases.
+
+== S16 ==
+Let me show some results.
+As you can see on this example, the woven mesh is reproduced without repetition.
+
+== S17 ==
+Here is a comparison with a discrete quilting method. 
+The quality is similar but our results are continuous.
+
+== S18 ==
+On this other example we see that we avoid repetition. In counterpart it is a little noisy.
+
+== S19 & S20 ==
+Our method can also be used to texture 3D model directly during rendering.
+See how wrinkles on the skin are preserved.
+
+== S21 ==
+Normal map structure can also be reproduced by our method.
+
+== S22 ==
+Even displacement maps can be treated.
+And this is hard to do with tradtionnal textures due to resolution issues.
+The continuous property of our model allows to add very fine details to heavily tesselated models in real time.
+
+== S23 ==
+Here are some limitations.
+First noise.
+The noise is not strictly stationary because of the regular grid.
+Secondly, the method is parameterization dependant.
+And finally, for some textures, the structure is spread all over the spectrum and we fail to capture it.
+
+== S24 ==
+We presented a new noise based procedural definition which reproduces structured patterns of input examples. This definition is automatically computed from an given image. Finally, it is much faster than current state of the art method allowing real time synthesis.
+
+== S25 ==
+Future works include the following. Firstly, we've assumed structure is being hidden in high energy frequencies. It works for most input examples but has not been solved in the general case.
+
+Secondly, extending our method to the third dimension is also a promising lead toward solid texturing.
+
+

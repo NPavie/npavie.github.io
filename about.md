@@ -1,30 +1,51 @@
 ---
 layout: page
-title: About
+title: About Me
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+So what about me ?
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+My name is Nicolas Pavie and i'm currently working for the [BrailleNet.org](https://www.braillenet.org) association and the [DAISY Consortium](https://www.daisy.org) as a software engineer. 
 
-There are currently two themes built on Poole:
+Please go check theirs websites and see what we do :)
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+I'm a passionate about IT in general, from low level architectures of processors to high level framework and APIs.
+I had a crush in my youth for Computer Graphics and decided to further explore this domain in my studies, up to a Ph. D. thesis on real-time rendering.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+Among my hobbies, i build PCs (well, when i can ... it's a rather expensive hobby).
+I also do some system administration and maintenance for friends and relative.
 
-## Setup
+I'm hosting a home server for inhouse streaming and personnal file backup.
 
-Some fun facts about the setup of this project include:
+## Academic and work experience
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+If you want, you can check [my (unupdated) resume](/public/files/CV_Nicolas_Pavie_en.pdf) to get a broad view of my cursus.
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+### Work experiences
 
-Thanks for reading!
+#### IT Manager @ [IGS-CP](https://www.igs-cp.fr)
+
+Summary of my missions : 
+- IT and software development teams manager.
+- Clients and internal web sites maintenance (database, back-end and front-end).
+- Image processing, editorial and printing softwares maintenance and monitoring.
+- Project manager and software developer on research projects: 
+  - Database model for spectral measurements of production papers, 
+  - Generation of print-ready PDF files from styled word documents, 
+  - ReactJS-based ink calculator for white paper simulation, 
+  - Production files long-term archiving process.
+- Assisting as software developer :
+  - XSLTs maintenance for ePub 3 generation process, 
+  - XML structuration/correction following clients’ DTDs 
+  - Proprietary Java-based XML files convertor software.
+
+
+### Research
+
+### Ph. D. Thesis in Computer Graphics
+
+### Reports, publications and talks
+
+- Workshop XLIM, 
+- [GT rendu (workshop on rendering), march 2013](http://gtrendu.blogspot.fr/2013_03_01_archive.html) : rendu procédural d'herbe par bruit de convolution - [Presentation](/public/files/GTRendu-mars2013.pdf)
+- Master ISICG study report, June 2012 : génération procédurale de champs d'herbe - [PDF](/public/files/M2StudyReport.pdf)
