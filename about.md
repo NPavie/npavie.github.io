@@ -54,7 +54,7 @@ Summary of my missions :
 #### Reports, publications and talks
 - Ph. D. Thesis, defended in November 2016 : Modélisation par bruit procédural et rendu de détails volumiques de surfaces dans les scènes virtuelles [HAL archives](https://hal.archives-ouvertes.fr/tel-01443555v1)
 - EG UK Computer Graphics & Visual Computing, 2016 : Volumetric Spot Noise for Procedural 3D Shell Texture Synthesis - [HAL archives](https://hal.archives-ouvertes.fr/hal-02413269)
-- WSCG International Conferences in Central Europe on Computer Graphics, Visualization and Computer Vision, 2016 : Procedural Texture Synthesis by Locally Controlled Spot Noise - [HAL archives](https://hal.archives-ouvertes.fr/hal-02413318)
+- WSCG International Conferences in Central Europe on Computer Graphics, Visualization and Computer Vision, 2016 : Procedural Texture Synthesis by Locally Controlled Spot Noise - [HAL archives](https://hal.archives-ouvertes.fr/hal-02413318), [Presentation](/public/files/LCSN/index.html)
 - Workshop XLIM 2014 - 2015 : Modélisation et rendu procédural de détails surfaciques 3D - [Presentation](/public/files/Presentation_Workshop_Xlim_2014.pdf) / [Poster](/public/files/Poster_Workshop_Xlim_2014.pdf)
 - [GT rendu (workshop on rendering), march 2013](http://gtrendu.blogspot.fr/2013_03_01_archive.html) : rendu procédural d'herbe par bruit de convolution - [Presentation](/public/files/GTRendu-mars2013.pdf)
 - Master ISICG study report, June 2012 : génération procédurale de champs d'herbe - [PDF](/public/files/M2StudyReport.pdf)
