@@ -8,14 +8,12 @@ plugins:
 
 # Permalinks
 permalink:        pretty
-#relative_permalinks: true
 
 # Setup
 title:            'Nicolas Pavie'
 tagline:          ''
-description:      'Software engineer @ <br/><a href="https://braillenet.org"><img src="https://www.braillenet.org/wp-content/themes/braillenet/img/logo-braillenet.png"/></a>'
-url:              http://npavie.github.io
-baseurl:          /
+description:      'Software engineer @ <a href="https://braillenet.org"><img src="https://www.braillenet.org/wp-content/themes/braillenet/img/logo-braillenet.png"/></a>'
+url:              https://npavie.github.io
 
 author:
   name:           'Mark Otto'

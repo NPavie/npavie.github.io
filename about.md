@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: About me
 ---
 
 So what about me ?
@@ -23,9 +23,12 @@ If you want, you can check [my (unupdated) resume](/public/files/CV_Nicolas_Pavi
 
 ### Work experiences
 
+#### Current position - Project manager in software engineering @ [BrailleNet.org](https://www.braillenet.org)
+
+
 #### IT Manager @ [IGS-CP](https://www.igs-cp.fr)
 
-Summary of my missions : 
+Summary of my missions: 
 - IT and software development teams manager.
 - Clients and internal web sites maintenance (database, back-end and front-end).
 - Image processing, editorial and printing softwares maintenance and monitoring.
@@ -39,6 +42,10 @@ Summary of my missions :
   - XML structuration/correction following clients’ DTDs 
   - Proprietary Java-based XML files convertor software.
 
+#### Teaching and research assitant @ [XLim](https://www.xlim.fr)
+
+Summary of my missions : 
+
 
 ### Research
 
@@ -46,6 +53,6 @@ Summary of my missions :
 
 ### Reports, publications and talks
 
-- Workshop XLIM, 
+- Workshop XLIM, 2014
 - [GT rendu (workshop on rendering), march 2013](http://gtrendu.blogspot.fr/2013_03_01_archive.html) : rendu procédural d'herbe par bruit de convolution - [Presentation](/public/files/GTRendu-mars2013.pdf)
 - Master ISICG study report, June 2012 : génération procédurale de champs d'herbe - [PDF](/public/files/M2StudyReport.pdf)
