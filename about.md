@@ -17,15 +17,21 @@ I also do some system administration and maintenance for friends and relative.
 
 I'm hosting a home server for inhouse streaming and personnal file backup.
 
-## Academic and professionnal experiences
+## Curriculum
 
 You can check [my (unupdated) resume](/public/files/CV_Nicolas_Pavie_en.pdf) to get a broad view of my cursus.
+
+### Reports, publications and talks
+- Ph. D. Thesis, defended in November 2016 : Modélisation par bruit procédural et rendu de détails volumiques de surfaces dans les scènes virtuelles [HAL archives](https://hal.archives-ouvertes.fr/tel-01443555v1)
+- EG UK Computer Graphics & Visual Computing, 2016 : Volumetric Spot Noise for Procedural 3D Shell Texture Synthesis - [HAL archives](https://hal.archives-ouvertes.fr/hal-02413269)
+- WSCG International Conferences in Central Europe on Computer Graphics, Visualization and Computer Vision, 2016 : Procedural Texture Synthesis by Locally Controlled Spot Noise - [HAL archives](https://hal.archives-ouvertes.fr/hal-02413318), [Presentation](/public/files/LCSN/index.html)
+- Workshop XLIM 2014 - 2015 : Modélisation et rendu procédural de détails surfaciques 3D - [Presentation](/public/files/Presentation_Workshop_Xlim_2014.pdf) / [Poster](/public/files/Poster_Workshop_Xlim_2014.pdf)
+- [GT rendu (workshop on rendering), march 2013](http://gtrendu.blogspot.fr/2013_03_01_archive.html) : rendu procédural d'herbe par bruit de convolution - [Presentation](/public/files/GTRendu-mars2013.pdf)
+- Master ISICG study report, June 2012 : génération procédurale de champs d'herbe - [PDF](/public/files/M2StudyReport.pdf)
 
 ### Professionnal experiences
 
 #### Current position - Project manager in software engineering @ [BrailleNet.org](https://www.braillenet.org)
-
-Summary of my missions: 
 
 #### IT Manager @ [IGS-CP](https://www.igs-cp.fr)
 
@@ -46,15 +52,36 @@ Summary of my missions:
 
 ### Academic experience
 
-#### Teaching and research assitant @ [XLim](https://www.xlim.fr)
+#### Ph. D. In Computer Graphics @ [Unilim](https://www.unilim.fr)
 
-Summary of my missions : 
+Thesis on Procedural generation of natural details in realistic image synthesis
 
+> The increase of demanding quality and complexity of computer-generated natural sceneries raises several needs : 
+> 
+> More appropriate content authoring methods, more efficient storage and interactive display techniques. 
+> 
+> This thesis focus on answering to those needs, using procedural approaches to produce natural stochastic phenomenon (clouds, complex vegetation ..) with a low memory requirement while keeping efficient rendering of very detailed natural sceneries.
 
-#### Reports, publications and talks
-- Ph. D. Thesis, defended in November 2016 : Modélisation par bruit procédural et rendu de détails volumiques de surfaces dans les scènes virtuelles [HAL archives](https://hal.archives-ouvertes.fr/tel-01443555v1)
-- EG UK Computer Graphics & Visual Computing, 2016 : Volumetric Spot Noise for Procedural 3D Shell Texture Synthesis - [HAL archives](https://hal.archives-ouvertes.fr/hal-02413269)
-- WSCG International Conferences in Central Europe on Computer Graphics, Visualization and Computer Vision, 2016 : Procedural Texture Synthesis by Locally Controlled Spot Noise - [HAL archives](https://hal.archives-ouvertes.fr/hal-02413318), [Presentation](/public/files/LCSN/index.html)
-- Workshop XLIM 2014 - 2015 : Modélisation et rendu procédural de détails surfaciques 3D - [Presentation](/public/files/Presentation_Workshop_Xlim_2014.pdf) / [Poster](/public/files/Poster_Workshop_Xlim_2014.pdf)
-- [GT rendu (workshop on rendering), march 2013](http://gtrendu.blogspot.fr/2013_03_01_archive.html) : rendu procédural d'herbe par bruit de convolution - [Presentation](/public/files/GTRendu-mars2013.pdf)
-- Master ISICG study report, June 2012 : génération procédurale de champs d'herbe - [PDF](/public/files/M2StudyReport.pdf)
+#### Research assitant @ [XLim](https://www.xlim.fr)
+
+Research fields : procedural noises for texture synthesis, real-time rendering, pointbased volume rendering on GPU.
+
+Research missions :
+- Assisting in the development, maintenance and optimisation of GobLim, the realtime rendering engine of the Realistic Image synthesis team based on OpenGL 4.3.
+- Exploring deployment techniques of the engine for Windows and Linux systems.
+- Backporting the rendering engine on Mac OSX systems (openGL 4.1 version).
+
+#### Teaching Assistant @ [Unilim](https://www.unilim.fr)
+
+Lecturer at the Faculty of Science and Technology, in the department of Information Technologies:
+- C language, 
+- Computers’ Architecture (ASM x86), 
+- HMI for android devices, 
+- GPGPU, 
+- parallel computing, 
+- programming for Unix-based system
+
+Lecturer at the University Institute of Technology, in the MMI department (multimedia and digital technologies):
+- Algorithmic
+- Image Processing
+
