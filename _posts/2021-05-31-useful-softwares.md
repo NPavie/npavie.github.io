@@ -32,10 +32,10 @@ I have my own Plex instance from content streaming on my device, even my chromec
 ### Data sync
 
 I happen to have tested several personnal cloud tools in the past years.
-- Sync : i test the bittorent based "sync" tool, but i had several issues putting it to work properly
-- NextCloud : Maybe the most full-feature platform i tested for cloud sync, but i was not sure i needed all the "document view and edition" part of it.
-I think it's a pretty good alternative/replacement of google drive or onedrive.
-- Seafile : A bit less features than nextcloud but is pretty performant. it's the one i'm using right now
+- [Syncthing](https://syncthing.net) : i tested this bittorent based "sync" tool, but i had several issues putting it to work properly
+- [NextCloud](https://nextcloud.com) : Maybe the most full-feature platform i tested for cloud sync, but i was not sure i needed all the "document view and edition" part of it.
+I think it's a pretty good alternative/replacement of google drive or onedrive with file sync.
+- [Seafile](https://www.seafile.com/en/home/) : A bit less features than nextcloud but is pretty performant. it's the one i'm using right now
 
 ### P2P client with web interface
 
@@ -48,7 +48,7 @@ I'm doing a bit of P2P, and i did not find anything better than transmission as 
 - Data recovery with [TestDisk](https://www.cgsecurity.org/wiki/TestDisk_FR)
 Note: i learned that a lot of "scam" software are selling UI on top of TestDisk for data recovery.
 
-- Virtual KVM (sharing mouse and keyboard across different PC) with [Barrier](https://github.com/debauchee/barrier), a fork of synergy.
+- Virtual KVM (sharing mouse and keyboard across different PC) with [Barrier](https://github.com/debauchee/barrier), a fork of synergy. I don't use it yet but i'm thinking of using it for advanced virtualization workspace with side-by-side Linux or MacOS and Windows guests on a virtualization rig. Just ound some [OSX-KVM intel for QEMU/KVM](https://github.com/kholia/OSX-KVM)
 
 ### For programming
 
