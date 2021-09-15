@@ -25,6 +25,12 @@ This VM is also administrate using [webmin](https://www.webmin.com).
 - [Element.io](https://element.io) : To be tested with self host using [this tutorial](https://cyberhost.uk/element-matrix-setup/), but should be able to replace a discord server. I a thinking of testing it for personal hosting, and possibly to replace mattermost as we may need to do audio meetings (with my work, i don't really need webcam, and i don't find visual calls to be usefull in general if no data is to be shared like screen sharing or presentation).
 - Teams : i happend to have tested MS teams for work. Except sharepoint and office online integration, i can't say i really appreciate the experience (especially when working on my work MacMini): The UI is sluggish and the integrated office tends to crash when working on complex document or large excel files. Except for the meetings aspect (that was not working very well for me and could be replaced by a jitsi meeting room), slack or mattermost behaves better and are more usefull for text-base content.
 
+### Organization software
+
+For now i mainly use a google calendar with the TimeSheet plugin to manage my work time on project, but its kind of limited and i thinking of switching to a different kind of tools.
+
+- [focalboard](https://www.focalboard.com/) : it is an alternative to notion. Its a kind of dashboard creation tools that can be selfhosted.
+
 ### Content streaming
 
 I have my own Plex instance from content streaming on my device, even my chromecast. It works pretty well, even in a virtual instance.
