@@ -30,14 +30,14 @@ You can check [my (unupdated) resume in english](/public/files/CV_Nicolas_Pavie_
 #### Current position - Project manager in software engineering @ [BrailleNet.org](https://www.braillenet.org)
 
 Summary of my missions :
-- Sofware engineering for BrailleNet :
+- Sofware engineering for BrailleNet:
   - Creating a process chain to optimize PDF rendered with PrinceXML for dyslexic persons,
   - Internship management for new text-to-speech adapters within the [DAISY pipeline 2](http://daisy.github.io/pipeline/) software,
   - Code management and development of the [IPIP platform](https://ipip.integriert-studieren.jku.at/) for the [SIDPT workgroup](https://github.com/SIDPT),
-- Sofware engineering for the DAISY Consortium :
+- Sofware engineering for the DAISY Consortium:
   - Assisting in the [DAISY pipeline 2](http://daisy.github.io/pipeline/) software development, focusing on the text-to-speech adapters used by BrailleNet
   - Managing and developping the [SaveAsDaisy word addin](https://daisy.github.io/word-save-as-daisy/)
--  Additionnal missions
+- Additionnal missions:
   - Administration of softwares' instances installed on BrailleNet premises: [mattermost](https://mm.braillenet.org), [limesurvey](https://limesurvey.braillenet.org)
 
 #### IT Manager @ [IGS-CP](https://www.igs-cp.fr)
