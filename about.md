@@ -11,7 +11,7 @@ I'm a passionate about IT in general, from low-level processors' architectures t
 I had a crush in my youth for Computer Graphics and decided to further explore this domain in my studies, up to a Ph. D. thesis on real-time rendering of surfacic details.
 
 Among my hobbies, i build PCs (when i can, it's a rather expensive hobby).
-I also do some system administration and maintenance for friends and relative, and i'm hosting a home server for inhouse streaming and personnal file backup.
+I also do some system administration and maintenance for friends and relative, and i'm hosting a home server for inhouse streaming and personnal files backup.
 
 ## Curriculum
 
