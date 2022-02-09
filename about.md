@@ -3,14 +3,14 @@ layout: page
 title: About me
 ---
 
-My name is Nicolas Pavie and i'm currently working for the [BrailleNet.org](https://www.braillenet.org) association and the [DAISY Consortium](https://www.daisy.org) as a software engineer. 
+My name is Nicolas Pavie, and i'm currently working for the [BrailleNet.org](https://www.braillenet.org) association and the [DAISY Consortium](https://www.daisy.org) as a software engineer. 
 
-Please go check theirs websites and see what we do :)
+Please go check their websites and see what we do :)
 
-I'm a passionate about IT in general, from low level architectures of processors to high level framework and APIs.
-I had a crush in my youth for Computer Graphics and decided to further explore this domain in my studies, up to a Ph. D. thesis on real-time rendering.
+I'm a passionate about IT in general, from low-level processors' architectures to high-level frameworks and APIs.
+I had a crush in my youth for Computer Graphics and decided to further explore this domain in my studies, up to a Ph. D. thesis on real-time rendering of surfacic details.
 
-Among my hobbies, i build PCs (well, when i can ... it's a rather expensive hobby).
+Among my hobbies, i build PCs (when i can, it's a rather expensive hobby).
 I also do some system administration and maintenance for friends and relative, and i'm hosting a home server for inhouse streaming and personnal file backup.
 
 ## Curriculum
@@ -37,8 +37,8 @@ Summary of my missions :
 - Sofware engineering for the DAISY Consortium :
   - Assisting in the [DAISY pipeline 2](http://daisy.github.io/pipeline/) software development, focusing on the text-to-speech adapters used by BrailleNet
   - Managing and developping the [SaveAsDaisy word addin](https://daisy.github.io/word-save-as-daisy/)
--  Additionnal mission
-  - 
+-  Additionnal missions
+  - Administration of softwares' instances installed on BrailleNet premises: [mattermost](https://mm.braillenet.org), [limesurvey](https://limesurvey.braillenet.org)
 
 #### IT Manager @ [IGS-CP](https://www.igs-cp.fr)
 
