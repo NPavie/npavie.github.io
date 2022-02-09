@@ -3,8 +3,6 @@ layout: page
 title: About me
 ---
 
-So what about me ?
-
 My name is Nicolas Pavie and i'm currently working for the [BrailleNet.org](https://www.braillenet.org) association and the [DAISY Consortium](https://www.daisy.org) as a software engineer. 
 
 Please go check theirs websites and see what we do :)
@@ -13,13 +11,11 @@ I'm a passionate about IT in general, from low level architectures of processors
 I had a crush in my youth for Computer Graphics and decided to further explore this domain in my studies, up to a Ph. D. thesis on real-time rendering.
 
 Among my hobbies, i build PCs (well, when i can ... it's a rather expensive hobby).
-I also do some system administration and maintenance for friends and relative.
-
-I'm hosting a home server for inhouse streaming and personnal file backup.
+I also do some system administration and maintenance for friends and relative, and i'm hosting a home server for inhouse streaming and personnal file backup.
 
 ## Curriculum
 
-You can check [my (unupdated) resume](/public/files/CV_Nicolas_Pavie_en.pdf) to get a broad view of my cursus.
+You can check [my (unupdated) resume in english](/public/files/CV_Nicolas_Pavie_en.pdf), or [the up-to-date french version](/public/files/CV_Nicolas_Pavie_01_2022.pdf), to get a broad view of my cursus.
 
 ### Reports, publications and talks
 - Ph. D. Thesis, defended in November 2016 : Modélisation par bruit procédural et rendu de détails volumiques de surfaces dans les scènes virtuelles [HAL archives](https://hal.archives-ouvertes.fr/tel-01443555v1)
@@ -32,6 +28,17 @@ You can check [my (unupdated) resume](/public/files/CV_Nicolas_Pavie_en.pdf) to 
 ### Professionnal experiences
 
 #### Current position - Project manager in software engineering @ [BrailleNet.org](https://www.braillenet.org)
+
+Summary of my missions :
+- Sofware engineering for BrailleNet :
+  - Creating a process chain to optimize PDF rendered with PrinceXML for dyslexic persons,
+  - Internship management for new text-to-speech adapters within the [DAISY pipeline 2](http://daisy.github.io/pipeline/) software,
+  - Code management and development of the [IPIP platform](https://ipip.integriert-studieren.jku.at/) for the [SIDPT workgroup](https://github.com/SIDPT),
+- Sofware engineering for the DAISY Consortium :
+  - Assisting in the [DAISY pipeline 2](http://daisy.github.io/pipeline/) software development, focusing on the text-to-speech adapters used by BrailleNet
+  - Managing and developping the [SaveAsDaisy word addin](https://daisy.github.io/word-save-as-daisy/)
+-  Additionnal mission
+  - 
 
 #### IT Manager @ [IGS-CP](https://www.igs-cp.fr)
 
