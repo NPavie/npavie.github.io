@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-My name is Nicolas Pavie, and i'm currently working for the [BrailleNet.org](https://www.braillenet.org) association and the [DAISY Consortium](https://www.daisy.org) as a software engineer. 
+My name is Nicolas Pavie, and i'm currently working for the [Association Valentin Haüy](https://www.avh.asso.fr/fr) and the [DAISY Consortium](https://www.daisy.org) as a software engineer. 
 
 Please go check their websites and see what we do :)
 
@@ -27,7 +27,18 @@ You can check [my (unupdated) resume in english](/public/files/CV_Nicolas_Pavie_
 
 ### Professionnal experiences
 
-#### Current position - Project manager in software engineering @ [BrailleNet.org](https://www.braillenet.org)
+#### Project manager in software engineering @ [AVH](https://www.avh.asso.fr/fr)
+
+Summary of my missions :
+- For AVH
+  - Helping support and improve the softwares of the transcription chain
+- For DAISY Consortium
+  - Assisting in the [DAISY pipeline 2](http://daisy.github.io/pipeline/) software development, focusing on the text-to-speech adapters used by AVH
+  - Managing and developping the [SaveAsDaisy word addin](https://daisy.github.io/word-save-as-daisy/)
+- Additionnal missions
+  - Code maintenance for the [SIDPT Workgroup](https://github.com/SIDPT) projects,
+
+#### Project manager in software engineering @ [BrailleNet.org](https://www.braillenet.org)
 
 Summary of my missions :
 - Sofware engineering for BrailleNet:
