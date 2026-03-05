@@ -75,12 +75,19 @@ Note: i learned that a lot of "scam" software are selling UI on top of TestDisk 
 
 ### For programming
 
-I mainly use sublime text and merge solutions for my work (but the cost may be a bit blocking, and i usually prefer open-source and multiplatform solution).
-When i don't have sublime text/merge available (work rig with windows), i usually rely on Visual Studio Code as generic code editor.
-I used a lot Atom in the past, but i had too many issues on very big projects and with packages.
+I have fallen in the quick trap and i'm now mosty relying on Visual Studio Code for developments for my day to day work, and Visual Studio community for everything C# or C/C++ related on windows.
+But i'm also trying to learn/use neovim with the [lazyvim](https://www.lazyvim.org/) distribution on my personnal rig and my macbook.
 
 For anyone working on Unix and doing some remote programming on server, i would recommend learning to use Vim (most complex but extremely complete text editor in the console).
 Just keep a comprehensive [cheatsheet](public/files/10-Best-VIM-Cheat-Sheet-01.jpeg) on hand :) : 
 
 <img src="public/files/10-Best-VIM-Cheat-Sheet-01.jpeg" />
 
+**2026 update :**
+As i'm not really decided on what to prioritize, i'm currently trying both Rust and Zig in different side/private projects.
+Rust being older and more widely adopted, it tends to be easier to find resources for specific tasks, and it gets easier than i though with some time in it to understand how to correctly code in it and follow the borrow checker.
+
+But I find very interesting the approach taken by zig with it's unified build system for compiling zig AND C/C++ libraries on most major platforms (OS+CPUs).
+I never got comfortable with CMAKE, and mixing makefile (with OS specific commands in some occasion ...) and vs projects always seemed to be a "necessary evil" to me, so the promise of having a unified build system written in the same language as the one use to program is a plus from my point of view.
+
+I admit i sometime feels a bit more frictions when coding in zig, but I assume that with practice, the friction would diminish.
