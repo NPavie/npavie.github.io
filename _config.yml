@@ -12,7 +12,7 @@ permalink:        pretty
 # Setup
 title:            'Nicolas Pavie'
 tagline:          ''
-description:      'Software engineer @ <a href="https://www.avh.asso.fr"><img src="https://www.avh.asso.fr/sites/all/themes/custom/customer/images/logo-home.png" alt="Association Valentin Haüy"/></a>'
+description:      'Software engineer @ <a href="https://www.avh.asso.fr"><img src="https://www.avh.asso.fr/themes/custom/avh/favicon.ico" alt="Association Valentin Haüy"/></a>'
 url:              https://npavie.github.io
 
 author:
