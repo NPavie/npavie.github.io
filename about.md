@@ -15,9 +15,7 @@ I also do some system administration and maintenance for friends and relative, a
 
 ## Curriculum
 
-<object data="https://raw.githubusercontent.com/NPavie/curriculum-vitae/master/cv_french.pdf" type="application/pdf" width="100%" height="100%">
-  <p>You can check my <a href="https://raw.githubusercontent.com/NPavie/curriculum-vitae/master/cv_french.pdf">most updated resume (in french)</a> to get a broad view of my cursus.</p>
-</object>
+You can check my [most updated resume (in french)](/public/files/cv_french.pdf), to get a broad view of my cursus.
 
 ### Reports, publications and talks
 - Ph. D. Thesis, defended in November 2016 : Modélisation par bruit procédural et rendu de détails volumiques de surfaces dans les scènes virtuelles [HAL archives](https://hal.archives-ouvertes.fr/tel-01443555v1)
