@@ -15,7 +15,9 @@ I also do some system administration and maintenance for friends and relative, a
 
 ## Curriculum
 
-You can check [my (unupdated) resume in english](/public/files/CV_Nicolas_Pavie_en.pdf), or [the up-to-date french version](/public/files/CV_Nicolas_Pavie_01_2022.pdf), to get a broad view of my cursus.
+<object data="https://raw.githubusercontent.com/NPavie/curriculum-vitae/master/cv_french.pdf" type="application/pdf" width="100%" height="100%">
+  <p>You can check my <a href="https://raw.githubusercontent.com/NPavie/curriculum-vitae/master/cv_french.pdf">most updated resume (in french)</a> to get a broad view of my cursus.</p>
+</object>
 
 ### Reports, publications and talks
 - Ph. D. Thesis, defended in November 2016 : Modélisation par bruit procédural et rendu de détails volumiques de surfaces dans les scènes virtuelles [HAL archives](https://hal.archives-ouvertes.fr/tel-01443555v1)
